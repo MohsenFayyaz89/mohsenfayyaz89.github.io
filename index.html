@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Publications</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Mohsen Fayyaz</h1>
+            <h2>Deep Learning and Computer Vision Researcher</h2>
+            <a href="https://www.linkedin.com/in/mfayaz/" class="btn-rounded-white">See Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Experienced Doctoral Researcher at the university of Bonn with a demonstrated history of working in the research industry. Skilled in Computer Vision and Deep Learning. Strong research professional with a Master’s Degree focused in Artificial Intelligence from MUT.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="November 2017 – Now">
+                <h3>University of Bonn</h3>
+                <h4>Research Assistant</h4>
+                <p>
+                    Doctoral research assistant at the University of Bonn, faculty of Computer Science III under supervision of Prof. Dr. J. Gall.
+                </p>
+            </div>
+
+            <div data-date="April 2016 – October 2017">
+                <h3>Sensifai</h3>
+                <h4>Deep Learning Researcher</h4>
+                <p>
+			Designing and Developing Deep Neural Networks Architectures for Computer Vision Tasks. 
+                </p>
+            </div>
+
+            <div data-date="September 2014 – August 2016">
+                <h3>Iran University of Science and Technology</h3>
+                <h4>Graduate Student Researcher</h4>
+                <p>
+                    Machine learning and Deep learning researcher in IUST HPC lab with the supervision of Prof. Dr. M. Fathy.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>University of Bonn</h3>
+            <span class="education-date">November 2017 - Now</span>
+            <h4>PhD Candidate, Computer Science</h4>
+            <p>
+                Supervisor: Prof. Dr. J. Gall
+            </p>
+        </div>
+        <!-- End .education-block -->
+
+	<div class="education-block">
+            <h3>MUT</h3>
+            <span class="education-date">September 2014 - September 2016</span>
+            <h4>Master of Science in Computer Engineering - Artificial Intelligence</h4>
+            <p>
+                Supervisors: Prof. Mahmood Fathy, Dr. Mojtaba Hosseini
+		Advisor: Dr. Mohammad Sabokrou
+		Thesis: Activity Recognition in Video based on Convolutional Neural Networks
+		GPA: 4.00/4.00
+		Ranked first with highest GPA among all Computer Engineering students (AI) since 2014
+            </p>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>Semnan University</h3>
+            <span class="education-date">September 2010 - September 2014</span>
+            <h4>Bachelor of Science in Computer Software Engineering</h4>
+            <p>
+              	Supervisor: Dr. K. Kiani.
+		Thesis: Designing and Implementing a Cloud-based Accounting System
+		Ranked First among all of the university computer engineering students since the year 2010  
+            </p>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Publications</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Deep-cascade: Cascading 3D Deep Neural Networks for Fast Anomaly Detection and Localization in Crowded Scenes</h3>
+                        <p>
+                            <b>Feb 2017 - IEEE Transactions on Image Processing</b><br>
+This paper proposes a fast and reliable method for anomaly detection and localization in video data showing crowded scenes. Time-efficient anomaly localization is an ongoing challenge and subject of this paper. We propose a cubic patch-based method, characterized by a cascade of classifiers, which makes use of an advanced feature learning approach. Our cascade of classifiers has two main stages. First, a light but deep 3D auto-encoder is used for early identification of “many” normal cubic patches.
+                        </p>
+                        <a href="http://ieeexplore.ieee.org/abstract/document/7858798/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bto8V7%2FaVTHinS9Xj9MkMgw%3D%3D">See Publication</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+		<div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>STFCN - Spatio-Temporal Fully Convolutional Neural Network for Semantic Segmentation of Street Scenes</h3>
+                        <p>
+                            <b>Sep 2016 - ACCV</b><br>
+This paper presents a novel method to involve both spatial and temporal features for semantic video segmentation. Current work on convolutional neural networks(CNNs) has shown that CNNs provide advanced spatial features supporting a very good performance of solutions for both image and video analysis, especially for the semantic segmentation task.
+			</p>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-319-54407-6_33?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bto8V7%2FaVTHinS9Xj9MkMgw%3D%3D">See Publication</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                
+		<div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>A novel approach for Finger Vein verification based on self-taught learning</h3>
+                        <p>
+                            <b>Nov 2015 - 9th Iranian Conference on Machine Vision and Image Processing (MVIP)</b><br>
+In this paper, we propose a method for user Finger Vein Authentication (FVA) as a biometric system. Using the discriminative features for classifying theses finger veins is one of the main tips that make difference in related works, thus we propose to learn a set of representative features, based on auto-encoders. 
+			</p>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-319-54407-6_33?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bto8V7%2FaVTHinS9Xj9MkMgw%3D%3D">See Publication</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>PyTorch</li>
+	    <li>Torch</li>
+	    <li>Tensorflow</li>
+	    <li>Caffe</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/mohsen.fayyaz89@gmail.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2017 Mohsen Fayyaz
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://mohsenfayyaz89.github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/mohsenfayyaz" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
