@@ -9,13 +9,14 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="libs/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <script type="text/javascript">
         window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
           heap.load("1625312160");
     </script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 
 <body>
@@ -32,16 +33,16 @@
                 <a href="#about">About</a>
             </li>
             <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
                 <a href="#projects">Selected Publications</a>
             </li>
             <li>
                 <a href="#workshops">Workshops</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
             </li>
             <li>
                 <a href="#skills">Skills</a>
@@ -88,84 +89,6 @@
     </div>
     <!-- End #about -->
 
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="November 2017 – Now">
-                <h3>University of Bonn</h3>
-                <h4>Doctoral Researcher</h4>
-                <p>
-                    Computer vision doctoral researcher at the University of Bonn, faculty of Computer Science III under supervision of <a href="http://pages.iai.uni-bonn.de/gall_juergen/" target="_blank">Prof. Dr. J. Gall</a>.
-                </p>
-            </div>
-
-            <div data-date="April 2016 – October 2017">
-                <h3>Sensifai</h3>
-                <h4>Computer Vision Researcher</h4>
-                <p>
-			Designing and Developing Deep Neural Networks Architectures for Computer Vision Tasks. 
-                </p>
-            </div>
-
-            <div data-date="September 2014 – August 2016">
-                <h3>Iran University of Science and Technology</h3>
-                <h4>Research Assistant</h4>
-                <p>
-                    Machine learning and Deep learning researcher in IUST HPC lab with the supervision of Prof. Dr. M. Fathy.
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3><a href="http://www.uni-bonn.de" target="_blank">University of Bonn</a></h3>
-            <span class="education-date">November 2017 - Now</span>
-            <h4>PhD Candidate, Computer Science</h4>
-            <p>
-                Supervisor: <a href="http://pages.iai.uni-bonn.de/gall_juergen/" target="_blank">Prof. Dr. J. Gall</a>
-            </p>
-        </div>
-        <!-- End .education-block -->
-
-	<div class="education-block">
-            <h3>MUT</h3>
-            <span class="education-date">September 2014 - September 2016</span>
-            <h4>Master of Science in Computer Science - Artificial Intelligence and Robotics</h4>
-            <p>
-                Supervisors: Prof. Mahmood Fathy, Dr. Mojtaba Hosseini<br>
-		Advisor: Dr. Mohammad Sabokrou<br>
-		Thesis: Activity Recognition in Video based on Convolutional Neural Networks<br>
-		GPA: 19.13/20.00<br>
-		Ranked First with highest GPA among all Computer Engineering students (AI) since 2014
-            </p>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>Semnan University</h3>
-            <span class="education-date">September 2010 - September 2014</span>
-            <h4>Bachelor of Science in Computer Software Engineering</h4>
-            <p>
-              	Supervisor: Dr. K. Kiani<br>
-		Thesis: Designing and Implementing a Cloud-based Accounting System<br>
-		Ranked First with highest GPA among all of the university computer engineering students since 2010  
-            </p>
-        </div>
-        <div class="education-block">
-            <h3>Allameh Helli High School</h3>
-            <span class="education-date">2006 - 2010</span>
-            <h4>Mathematics and Physics</h4>
-            <p>
-                National Organization for Development of Exceptional Talents (NODET)
-            </p>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
     <div id="projects" class="background-alt" >
         <h2 class="heading">Selected Publications</h2>
         <div class="row" style="padding-bottom: 20px">
@@ -177,7 +100,7 @@
         <div class="container" style="text-align: left;">
 
             <div class="row">
-	        <div class="project shadow-large" >
+            <div class="project shadow-large" >
                     <div class="project-image">
                         <img src="images/Papers/SCT_CVPR20.jpg" width=300 height=200 />
                     </div>
@@ -186,7 +109,7 @@
                         <p>
                             <h3>SCT: Set Constrained Temporal Transformer for Set Supervised Action Segmentation</h3>
                             <b>2020 - CVPR</b><br>
-    			            <b>M. Fayyaz</b> and J. Gall<br>
+                            <b>M. Fayyaz</b> and J. Gall<br>
                         </p>
                         <a href="https://arxiv.org/pdf/2003.14266.pdf">Paper</a> | <a href="https://github.com/MohsenFayyaz89/SCT">Code</a>
                     </div>
@@ -227,7 +150,7 @@
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-		    <div class="project shadow-large">
+            <div class="project shadow-large">
                     <div class="project-image">
                         <img src="images/Papers/ACCV18.png" width=300 height=200 />
                     </div>
@@ -236,7 +159,7 @@
                         <p>
                             <h3> AVID: Adversarial Visual Irregularity Detection</h3>
                             <b>2018 - ACCV</b><br>
-			                 M. Sabokrou<sup>*</sup>, M. Pourreza<sup>*</sup>, <b>M. Fayyaz<sup>*</sup></b>, R. Entezari, R. Fathy, J. Gall, E. Adeli<br>
+                             M. Sabokrou<sup>*</sup>, M. Pourreza<sup>*</sup>, <b>M. Fayyaz<sup>*</sup></b>, R. Entezari, R. Fathy, J. Gall, E. Adeli<br>
                              <sup>*</sup>Equal contribution 
                         </p>
                         <a href="https://arxiv.org/pdf/1805.09521.pdf">Paper</a>
@@ -244,7 +167,7 @@
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-		    <div class="project shadow-large">
+            <div class="project shadow-large">
                     <div class="project-image">
                         <img src="images/Papers/ECCV18.png" width=250 height=200 />
                     </div>
@@ -261,7 +184,7 @@
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-		<div class="project shadow-large">
+        <div class="project shadow-large">
                     <div class="project-image" style="min-height: 200px ">
                         <br>
                         <img src="images/Papers/T3D_CVPR18_W.png" width=300 height=150 />
@@ -271,7 +194,7 @@
                         <p>
                             <h3>Temporal 3D ConvNets by Temporal Transition Layer</h3>
                             <b>2018 - CVPR Workshop on Brave New Ideas in Video Understanding 2018</b><br>
-			                A. Diba<sup>*</sup>, <b>M. Fayyaz<sup>*</sup></b>, V. Sharma, A. Karami, M. Arzani, R. Yousefzadeh, L. Van Gool<br>
+                            A. Diba<sup>*</sup>, <b>M. Fayyaz<sup>*</sup></b>, V. Sharma, A. Karami, M. Arzani, R. Yousefzadeh, L. Van Gool<br>
                             <sup>*</sup>Equal contribution
                         </p>
                         <a href="http://openaccess.thecvf.com/CVPR2018_workshops/content_CVPR_2018/papers/w19/Diba_Temporal_3D_ConvNets_CVPR_2018_paper.pdf">Paper</a>
@@ -280,7 +203,7 @@
                 </div>
                 <!-- End .project -->
 
-		<div class="project shadow-large" style="">
+        <div class="project shadow-large" style="">
                     <div class="project-image" style="min-height: 200px ">
                         <br>
                         <br>
@@ -291,7 +214,7 @@
                         <p>
                             <h3>Deep-anomaly: Fully convolutional neural network for fast anomaly detection in crowded scenes</h3>
                             <b>2018 - Computer Vision and Image Understanding</b><br>
-			                M. Sabokro<sup>*</sup>, <b>M. Fayyaz<sup>*</sup></b>, M. Fathy, Z. Moayed, R. Klette<br>
+                            M. Sabokro<sup>*</sup>, <b>M. Fayyaz<sup>*</sup></b>, M. Fathy, Z. Moayed, R. Klette<br>
                             <sup>*</sup>Equal contribution
                         </p>
                         <a href="https://www.sciencedirect.com/science/article/pii/S1077314218300249?via%3Dihub#!">Paper</a>
@@ -311,7 +234,7 @@
                         <p>
                             <h3>Deep-cascade: Cascading 3D Deep Neural Networks for Fast Anomaly Detection and Localization in Crowded Scenes</h3>
                             <b>2017 - IEEE Transactions on Image Processing</b><br>
-			                 M. Sabokro, <b>M. Fayyaz</b>, M. Fathy, R. Klette<br>
+                             M. Sabokro, <b>M. Fayyaz</b>, M. Fathy, R. Klette<br>
                         </p>
                         <a href="http://ieeexplore.ieee.org/abstract/document/7858798/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bto8V7%2FaVTHinS9Xj9MkMgw%3D%3D">Paper</a>
                     </div>
@@ -319,7 +242,7 @@
                 </div>
                 <!-- End .project -->
 
-		<div class="project shadow-large" style="min-height: 200px ">
+        <div class="project shadow-large" style="min-height: 200px ">
                     <div class="project-image">
                         <br>
                         <img src="images/Papers/STFCN_ACCV16_W.png" width=300 height=150/>
@@ -329,9 +252,9 @@
                         <p>
                             <h3>STFCN - Spatio-Temporal Fully Convolutional Neural Network for Semantic Segmentation of Street Scenes</h3>
                             <b>2016 - ACCV Workshop</b><br>
-			    <b>M. Fayyaz</b>, M. Sabokro, M. Hajizadeh, M. Fathy, F. Huang, R. Klette<br>
+                <b>M. Fayyaz</b>, M. Sabokro, M. Hajizadeh, M. Fathy, F. Huang, R. Klette<br>
 
-			</p>
+            </p>
                         <a href="https://link.springer.com/chapter/10.1007/978-3-319-54407-6_33?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bto8V7%2FaVTHinS9Xj9MkMgw%3D%3D">Paper</a>
                     </div>
                     <!-- End .project-info -->
@@ -340,7 +263,7 @@
         </div>
         </div>
     </div>
-
+    <!--End Papers -->
     <div id="workshops" style="text-align: center;">
         <br>
         <h2 class="heading">Workshops and Tutorials</h2>
@@ -377,7 +300,87 @@
                 <a href="https://research.fb.com/people/paluri-manohar/" target="_blank">Manohar Paluri (Facebook)</a>
         </div>
     </div>
-	
+    <!--End Workshops -->
+
+    <div id="experience" class="background-alt">
+                <h2 class="heading">Experience</h2>
+                <div id="experience-timeline">
+                    <div data-date="November 2017 – Now">
+                        <h3>University of Bonn</h3>
+                        <h4>Doctoral Researcher</h4>
+                        <p>
+                            Computer vision doctoral researcher at the University of Bonn, faculty of Computer Science III under supervision of <a href="http://pages.iai.uni-bonn.de/gall_juergen/" target="_blank">Prof. Dr. J. Gall</a>.
+                        </p>
+                    </div>
+
+                    <div data-date="April 2016 – October 2017">
+                        <h3>Sensifai</h3>
+                        <h4>Computer Vision Researcher</h4>
+                        <p>
+        			Designing and Developing Deep Neural Networks Architectures for Computer Vision Tasks. 
+                        </p>
+                    </div>
+
+                    <div data-date="September 2014 – August 2016">
+                        <h3>Iran University of Science and Technology</h3>
+                        <h4>Research Assistant</h4>
+                        <p>
+                            Machine learning and Deep learning researcher in IUST HPC lab with the supervision of Prof. Dr. M. Fathy.
+                        </p>
+                    </div>
+                </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3><a href="http://www.uni-bonn.de" target="_blank">University of Bonn</a></h3>
+            <span class="education-date">November 2017 - Now</span>
+            <h4>PhD Candidate, Computer Science</h4>
+            <p>
+                Supervisor: <a href="http://pages.iai.uni-bonn.de/gall_juergen/" target="_blank">Prof. Dr. J. Gall</a>
+            </p>
+        </div>
+        <!-- End .education-block -->
+
+	   <div class="education-block">
+            <h3>MUT</h3>
+            <span class="education-date">September 2014 - September 2016</span>
+            <h4>Master of Science in Computer Science - Artificial Intelligence and Robotics</h4>
+            <p>
+                Supervisors: Prof. Mahmood Fathy, Dr. Mojtaba Hosseini<br>
+		        Advisor: Dr. Mohammad Sabokrou<br>
+                Thesis: Activity Recognition in Video based on Convolutional Neural Networks<br>
+		        GPA: 19.13/20.00<br>
+		        Ranked First with highest GPA among all Computer Engineering students (AI) since 2014
+            </p>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>Semnan University</h3>
+            <span class="education-date">September 2010 - September 2014</span>
+            <h4>Bachelor of Science in Computer Software Engineering</h4>
+            <p>
+              	Supervisor: Dr. K. Kiani<br>
+		        Thesis: Designing and Implementing a Cloud-based Accounting System<br>
+		        Ranked First with highest GPA among all of the university computer engineering students since 2010  
+            </p>
+        </div>
+        <div class="education-block">
+            <h3>Allameh Helli High School</h3>
+            <span class="education-date">2006 - 2010</span>
+            <h4>Mathematics and Physics</h4>
+            <p>
+                National Organization for Development of Exceptional Talents (NODET)
+            </p>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    
     <div id="skills" class="background-alt">
         <h2 class="heading">Skills</h2>
         <ul>
@@ -389,16 +392,21 @@
     <!-- End #skills -->
 
     <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/mohsen.fayyaz89@gmail.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+        <div class="row">
+        
+            <h2>Get in Touch</h2>
+            <div id="contact-form">
+                <form method="POST" action="https://formspree.io/mohsen.fayyaz89@gmail.com">
+                    <input type="hidden" name="_subject" value="Contact request from personal website" />
+                    <input type="email" name="_replyto" placeholder="Your email" required>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <!-- End #contact-form -->
+        
+        
         </div>
-        <!-- End #contact-form -->
     </div>
     <!-- End #contact -->
 
@@ -420,17 +428,20 @@
                 <div class="col-sm-5 social" style="font-size: 40px">
                     <ul>
                         <li>
-                            <a href="https://github.com/MohsenFayyaz89" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/MohsenFayyaz89" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/mohsen.fayyaz" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/mohsen.fayyaz" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/MohsenFyz" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/MohsenFyz" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/mfayaz/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="https://scholar.google.com/citations?user=IBtTAGoAAAAJ&hl=en" target="_blank">
-                                <img src="https://scholar.google.com/favicon.ico" width="55" height="75" style="padding-bottom: 20px;"></a>
+                                <img src="https://scholar.google.com/favicon.ico" width="55" height="72" style="padding-bottom: 20px;"></a>
                         </li>
                     </ul>
                 </div>
