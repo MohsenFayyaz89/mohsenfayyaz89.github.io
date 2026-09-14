@@ -1,0 +1,232 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Publications — Mohsen Fayyaz</title><meta name="description" content="Researcher-builder working on foundation models, post-training, multimodal learning, video understanding, and efficient model design."><style>:root {
+  color-scheme: light;
+  --bg: #f8f9fb;
+  --surface: rgba(255, 255, 255, 0.86);
+  --surface-strong: #ffffff;
+  --text: #15171b;
+  --muted: #646b78;
+  --faint: #9299a6;
+  --line: #e4e7ec;
+  --accent: #2448d8;
+  --accent-soft: #eef2ff;
+  --accent-deep: #17339f;
+  --shadow: 0 14px 50px rgba(20, 27, 46, 0.07);
+  --max: 1120px;
+  --radius: 22px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0f1115;
+  --surface: rgba(22, 25, 31, 0.88);
+  --surface-strong: #16191f;
+  --text: #f0f2f6;
+  --muted: #a2a9b6;
+  --faint: #747d8d;
+  --line: #282d36;
+  --accent: #8ba4ff;
+  --accent-soft: #1b2443;
+  --accent-deep: #b6c3ff;
+  --shadow: 0 16px 56px rgba(0, 0, 0, 0.26);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 30rem),
+    var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+button { font: inherit; }
+
+.shell { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+main { min-height: 70vh; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  background: color-mix(in srgb, var(--bg) 84%, transparent);
+  backdrop-filter: blur(18px);
+}
+.nav-wrap { height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 740; letter-spacing: -0.02em; }
+.brand-mark {
+  width: 34px; height: 34px; display: grid; place-items: center;
+  border-radius: 10px; background: var(--text); color: var(--bg);
+  font-size: 12px; font-weight: 820; letter-spacing: -0.04em;
+}
+.nav-links { display: flex; align-items: center; gap: 4px; }
+.nav-links a, .theme-toggle {
+  color: var(--muted); padding: 8px 10px; border-radius: 10px; border: 0; background: transparent;
+  transition: background .2s ease, color .2s ease;
+}
+.nav-links a:hover, .nav-links a[aria-current='page'], .theme-toggle:hover { background: var(--surface-strong); color: var(--text); }
+.theme-toggle { cursor: pointer; font-size: 18px; line-height: 1; }
+
+.hero { padding: 102px 0 70px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(300px, .75fr); gap: 70px; align-items: end; }
+.eyebrow { color: var(--accent); font-size: 13px; font-weight: 760; letter-spacing: .11em; text-transform: uppercase; }
+h1, h2, h3 { margin: 0; line-height: 1.1; letter-spacing: -0.045em; }
+h1 { font-size: clamp(3.6rem, 8vw, 6.7rem); max-width: 820px; }
+h2 { font-size: clamp(2rem, 4vw, 3.25rem); }
+h3 { font-size: 1.34rem; letter-spacing: -0.025em; }
+.hero-copy { max-width: 780px; margin: 24px 0 0; font-size: clamp(1.15rem, 2vw, 1.36rem); color: var(--muted); line-height: 1.58; }
+.hero-copy strong { color: var(--text); font-weight: 650; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.button {
+  display: inline-flex; gap: 8px; align-items: center; justify-content: center;
+  min-height: 44px; padding: 10px 15px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--surface-strong); color: var(--text); font-weight: 650;
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+.button:hover { color: var(--text); transform: translateY(-1px); border-color: color-mix(in srgb, var(--accent) 42%, var(--line)); box-shadow: 0 8px 24px rgba(22, 34, 66, .08); }
+.button.primary { background: var(--text); border-color: var(--text); color: var(--bg); }
+.button.primary:hover { color: var(--bg); }
+
+.hero-side { border-left: 1px solid var(--line); padding-left: 34px; }
+.profile-photo {
+  width: 188px; height: 188px; display: block;
+  border-radius: 50%; border: 1px solid var(--line); background-color: #fff;
+  box-shadow: 0 14px 42px rgba(20, 27, 46, .10); margin-bottom: 28px;
+}
+.skydiving-photo {
+  background-image: url("images/0.jpeg");
+  background-repeat: no-repeat;
+  background-size: 340% auto;
+  background-position: 53% 0%;
+}
+.hero-side-title { font-weight: 720; margin-bottom: 14px; }
+.topic-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.topic { padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 14px; background: color-mix(in srgb, var(--surface) 82%, transparent); }
+
+.section { padding: 78px 0; }
+.section + .section { border-top: 1px solid var(--line); }
+.section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.section-kicker { color: var(--accent); font-weight: 740; font-size: 13px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+.section-intro { color: var(--muted); max-width: 680px; margin: 12px 0 0; }
+.inline-link { color: var(--accent); font-weight: 670; white-space: nowrap; }
+
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.project-card {
+  min-height: 155px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
+  box-shadow: var(--shadow); transition: transform .18s ease, border-color .18s ease;
+}
+.project-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); color: var(--text); }
+.project-label { color: var(--faint); font-size: 12px; text-transform: uppercase; letter-spacing: .09em; font-weight: 740; }
+.project-arrow { color: var(--accent); font-size: 22px; }
+
+.research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.paper-card { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-strong); display: flex; flex-direction: column; min-height: 290px; }
+.paper-meta { display: flex; align-items: center; gap: 8px; color: var(--accent); font-size: 13px; font-weight: 760; text-transform: uppercase; letter-spacing: .06em; }
+.paper-title { margin-top: 16px; }
+.paper-desc { color: var(--muted); margin: 14px 0 18px; }
+.paper-authors { color: var(--faint); font-size: 14px; line-height: 1.5; margin-top: auto; }
+.paper-links { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 18px; font-size: 14px; font-weight: 680; }
+.paper-links a { color: var(--accent); }
+
+.impact { padding: 32px; border: 1px solid var(--line); border-radius: 28px; background: linear-gradient(135deg, var(--surface-strong), color-mix(in srgb, var(--accent-soft) 66%, var(--surface-strong))); }
+.impact-grid { display: grid; grid-template-columns: 1.25fr repeat(3, 1fr); gap: 20px; align-items: center; }
+.impact-label { color: var(--muted); }
+.stat-value { display: block; font-size: clamp(2rem, 4vw, 3rem); line-height: 1; font-weight: 790; letter-spacing: -0.045em; }
+.stat-label { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+.update-note { margin: 12px 0 0; color: var(--faint); font-size: 12px; }
+
+.background-card { display: grid; grid-template-columns: .75fr 1.25fr; gap: 34px; padding: 34px; border: 1px solid var(--line); border-radius: 28px; background: var(--surface-strong); }
+.phd-school { font-size: 1.35rem; font-weight: 740; letter-spacing: -0.025em; }
+.phd-date { color: var(--muted); margin-top: 6px; }
+.distinction { font-weight: 740; margin-bottom: 3px; }
+.grade { color: var(--text); font-weight: 680; }
+.grade-note { color: var(--muted); margin: 8px 0 18px; font-size: 14px; max-width: 720px; }
+.detail-row { margin: 10px 0; color: var(--muted); }
+.detail-row strong { color: var(--text); }
+.award { margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: var(--accent-soft); color: var(--text); }
+
+.page-hero { padding: 80px 0 44px; }
+.page-hero p { max-width: 760px; color: var(--muted); font-size: 1.15rem; }
+.publication-list { display: grid; gap: 0; }
+.publication-row { padding: 26px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 22px; }
+.publication-year { color: var(--faint); font-variant-numeric: tabular-nums; }
+.publication-title { font-size: 1.14rem; font-weight: 730; line-height: 1.35; letter-spacing: -0.018em; }
+.publication-venue { color: var(--accent); font-weight: 720; font-size: 14px; margin-top: 7px; }
+.publication-authors { color: var(--muted); font-size: 14px; margin-top: 5px; }
+.publication-links { display: flex; gap: 12px; margin-top: 10px; font-size: 14px; font-weight: 680; }
+.publication-links a { color: var(--accent); }
+
+.theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.theme-card { padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface-strong); }
+.theme-card p { color: var(--muted); margin-bottom: 0; }
+
+
+.event-list { border-top: 1px solid var(--line); }
+.event-row { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 24px; padding: 21px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.event-venue { text-align: right; color: var(--accent); font-weight: 780; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.event-title { font-size: 1.02rem; line-height: 1.45; }
+.event-title strong { font-weight: 760; }
+.event-location { color: var(--muted); font-size: 14px; margin-top: 3px; }
+
+.site-footer { border-top: 1px solid var(--line); margin-top: 60px; }
+.footer-wrap { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 32px 0 42px; color: var(--muted); font-size: 14px; }
+.footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
+
+@media (max-width: 850px) {
+  .hero { padding-top: 72px; }
+  .hero-grid, .background-card { grid-template-columns: 1fr; gap: 34px; }
+  .hero-side { border-left: 0; border-top: 1px solid var(--line); padding: 24px 0 0; }
+  .projects-grid, .theme-grid { grid-template-columns: 1fr; }
+  .research-grid { grid-template-columns: 1fr; }
+  .impact-grid { grid-template-columns: repeat(3, 1fr); }
+  .impact-copy { grid-column: 1 / -1; }
+  .nav-links a:not(.keep-mobile) { display: none; }
+}
+
+@media (max-width: 560px) {
+  .shell { width: min(calc(100% - 26px), var(--max)); }
+  .nav-wrap { height: 62px; }
+  .hero { padding: 58px 0 48px; }
+  h1 { font-size: clamp(3rem, 17vw, 4.4rem); }
+  .section { padding: 58px 0; }
+  .section-head { align-items: start; flex-direction: column; gap: 12px; }
+  .impact { padding: 24px; }
+  .impact-grid { grid-template-columns: 1fr; }
+  .impact-copy { grid-column: auto; }
+  .publication-row { grid-template-columns: 1fr; gap: 5px; }
+  .event-row { grid-template-columns: 1fr; gap: 4px; }
+  .event-venue { text-align: left; }
+  .footer-wrap { align-items: flex-start; flex-direction: column; }
+}
+.event-link { color: var(--text); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.event-link:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+
+.project-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}.project-meta{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}.project-meta span{display:inline-flex;align-items:center;padding:.32rem .58rem;border:1px solid var(--border);border-radius:999px;font-size:.76rem;line-height:1.15;color:var(--muted)}
+</style><script>(()=>{const s=localStorage.getItem('theme');const d=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.dataset.theme='dark';})();</script></head><body><header class="site-header"><div class="shell nav-wrap"><a class="brand" href="index.html" aria-label="Mohsen Fayyaz home"><span class="brand-mark">MF</span><span>Mohsen Fayyaz</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="index.html">Home</a><a href="index.html#research">Research</a><a href="publications.html" aria-current="page">Publications</a><a href="index.html#workshops-talks">Talks</a><a href="index.html#about">About</a><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">◐</button></nav></div></header><main><section class="page-hero"><div class="shell"><div class="section-kicker">Publications</div><h1 style="font-size:clamp(2.8rem,6vw,5rem)">All publications</h1><p>A selection of research across multimodal learning, video understanding, efficient model design, and machine learning systems.</p></div></section><section class="section"><div class="shell"><div class="section-head"><div><div class="section-kicker">Research</div><h2>Publications</h2><p class="section-intro">For the complete and most up-to-date record, visit Google Scholar.</p></div><a class="inline-link" href="https://scholar.google.com/citations?hl=en&amp;user=IBtTAGoAAAAJ" target="_blank" rel="noreferrer">Google Scholar ↗</a></div><div class="publication-list"><article class="publication-row"><div class="publication-year">2026</div><div><div class="publication-title">STRIVE: Structured Spatiotemporal Exploration for Reinforcement Learning in Video Question Answering</div><div class="publication-venue">arXiv preprint</div><div class="publication-authors">Emad Bahrami, Olga Zatsarynna, Parth Pathak, Sunando Sengupta, Jürgen Gall, Mohsen Fayyaz</div><div class="publication-links"><a href="https://arxiv.org/abs/2604.01824" target="_blank" rel="noreferrer">Paper ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2025</div><div><div class="publication-title">Enhancing Temporal Understanding in Video-LLMs through Stacked Temporal Attention in Vision Encoders</div><div class="publication-venue">NeurIPS</div><div class="publication-authors">Ali Rasekh, Erfan Bagheri Soula, Omid Daliran, Simon Gottschalk, Mohsen Fayyaz</div><div class="publication-links"><a href="https://arxiv.org/abs/2510.26027" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://alirasekh.github.io/STAVEQ2/" target="_blank" rel="noreferrer">Project ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2025</div><div><div class="publication-title">DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights</div><div class="publication-venue">arXiv preprint</div><div class="publication-authors">Liana Mikaelyan, Ayyoob Imani, Mathew Salvaris, Parth Pathak, Mohsen Fayyaz</div><div class="publication-links"><a href="https://arxiv.org/abs/2501.18596" target="_blank" rel="noreferrer">Paper ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2024</div><div><div class="publication-title">Occlusion Handling in 3D Human Pose Estimation with Perturbed Positional Encoding</div><div class="publication-venue">ECCV</div><div class="publication-authors">Niloofar Azizi, Mohsen Fayyaz, Horst Bischof</div></div></article>
+<article class="publication-row"><div class="publication-year">2022</div><div><div class="publication-title">TaylorSwiftNet: Taylor Driven Temporal Modeling for Swift Future Frame Prediction</div><div class="publication-venue">BMVC</div><div class="publication-authors">Saber Pourheydari*, Emad Bahrami*, Mohsen Fayyaz*, Gianpiero Francesca, Mehdi Noroozi, Jürgen Gall</div><div class="publication-links"><a href="https://arxiv.org/abs/2110.14392" target="_blank" rel="noreferrer">Paper ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2022</div><div><div class="publication-title">Adaptive Token Sampling for Efficient Vision Transformers</div><div class="publication-venue">ECCV — Oral Presentation (Top 3%)</div><div class="publication-authors">Mohsen Fayyaz*, Soroush Abbasi Koohpayegani*, Farnoush Rezaei Jafari*, Sunando Sengupta, Hamid Reza Vaezi Joze, Eric Sommerlade, Hamed Pirsiavash, Jürgen Gall</div><div class="publication-links"><a href="https://arxiv.org/abs/2111.15667" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://adaptivetokensampling.github.io/" target="_blank" rel="noreferrer">Project ↗</a><a href="https://github.com/adaptivetokensampling/ATS" target="_blank" rel="noreferrer">Code ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2022</div><div><div class="publication-title">Fast Weakly Supervised Action Segmentation Using Mutual Consistency</div><div class="publication-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</div><div class="publication-authors">Yaser Souri*, Mohsen Fayyaz*, Luca Minciullo, Gianpiero Francesca, Jürgen Gall</div><div class="publication-links"><a href="https://arxiv.org/abs/1904.03116" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://github.com/yassersouri/MuCon" target="_blank" rel="noreferrer">Code ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2021</div><div><div class="publication-title">3D CNNs with Adaptive Temporal Feature Resolutions</div><div class="publication-venue">CVPR</div><div class="publication-authors">Mohsen Fayyaz*, Emad Bahrami*, Ali Diba, Mehdi Noroozi, Ehsan Adeli, Luc Van Gool, Jürgen Gall</div><div class="publication-links"><a href="https://arxiv.org/abs/2011.08652" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://similarityguidedsampling.github.io/" target="_blank" rel="noreferrer">Project ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2021</div><div><div class="publication-title">Long Short View Feature Decomposition via Contrastive Video Representation Learning</div><div class="publication-venue">ICCV</div><div class="publication-authors">Nadine Behrmann, Mohsen Fayyaz, Jürgen Gall, Mehdi Noroozi</div><div class="publication-links"><a href="http://gall.cv-uni-bonn.de/download/featuredecomposition_iccv19.pdf" target="_blank" rel="noreferrer">Paper ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2020</div><div><div class="publication-title">Large Scale Holistic Video Understanding</div><div class="publication-venue">ECCV — Spotlight (Top 3%)</div><div class="publication-authors">Ali Diba*†, Mohsen Fayyaz*†, Vivek Sharma*†, Manohar Paluri, Jürgen Gall, Rainer Stiefelhagen, Luc Van Gool</div><div class="publication-links"><a href="https://arxiv.org/abs/1904.11451" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://holistic-video-understanding.github.io/" target="_blank" rel="noreferrer">Project ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2020</div><div><div class="publication-title">SCT: Set Constrained Temporal Transformer for Set Supervised Action Segmentation</div><div class="publication-venue">CVPR</div><div class="publication-authors">Mohsen Fayyaz, Jürgen Gall</div><div class="publication-links"><a href="https://arxiv.org/abs/2003.14266" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://github.com/MohsenFayyaz89/SCT" target="_blank" rel="noreferrer">Code ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2018</div><div><div class="publication-title">AVID: Adversarial Visual Irregularity Detection</div><div class="publication-venue">ACCV</div><div class="publication-authors">Mohammad Sabokrou*, Masoud Pourreza*, Mohsen Fayyaz*, Rahim Entezari, Mahmood Fathy, Jürgen Gall, Ehsan Adeli</div><div class="publication-links"><a href="https://arxiv.org/abs/1805.09521" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://github.com/masoudpz/AVID-Adversarial-Visual-Irregularity-Detection" target="_blank" rel="noreferrer">Code ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2018</div><div><div class="publication-title">Spatio-Temporal Channel Correlation Networks for Action Classification</div><div class="publication-venue">ECCV</div><div class="publication-authors">Ali Diba*, Mohsen Fayyaz*, Vivek Sharma, M. Mahdi Arzani, Rahman Yousefzadeh, Jürgen Gall, Luc Van Gool</div><div class="publication-links"><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Ali_Diba_Spatio-Temporal_Channel_Correlation_ECCV_2018_paper.pdf" target="_blank" rel="noreferrer">Paper ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2018</div><div><div class="publication-title">Temporal 3D ConvNets by Temporal Transition Layer</div><div class="publication-venue">CVPR Workshop on Brave New Ideas in Video Understanding</div><div class="publication-authors">Ali Diba*, Mohsen Fayyaz*, Vivek Sharma, A. Karami, M. Arzani, Rahman Yousefzadeh, Luc Van Gool</div><div class="publication-links"><a href="http://openaccess.thecvf.com/CVPR2018_workshops/content_CVPR_2018/papers/w19/Diba_Temporal_3D_ConvNets_CVPR_2018_paper.pdf" target="_blank" rel="noreferrer">Paper ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2018</div><div><div class="publication-title">Deep-anomaly: Fully Convolutional Neural Network for Fast Anomaly Detection in Crowded Scenes</div><div class="publication-venue">Computer Vision and Image Understanding</div><div class="publication-authors">Mohammad Sabokrou*, Mohsen Fayyaz*, Mahmood Fathy, Zahra Moayed, Reinhard Klette</div><div class="publication-links"><a href="https://www.sciencedirect.com/science/article/pii/S1077314218300249" target="_blank" rel="noreferrer">Paper ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2018</div><div><div class="publication-title">Towards Principled Design of Deep Convolutional Networks: Introducing SimpNet</div><div class="publication-venue">arXiv preprint</div><div class="publication-authors">Seyyed Hossein Hasanpour, Mohammad Rouhani, Mohsen Fayyaz, Mohammad Sabokrou, Ehsan Adeli</div><div class="publication-links"><a href="https://arxiv.org/abs/1802.06205" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://github.com/Coderx7/SimpNet" target="_blank" rel="noreferrer">Code ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2017</div><div><div class="publication-title">Deep-cascade: Cascading 3D Deep Neural Networks for Fast Anomaly Detection and Localization in Crowded Scenes</div><div class="publication-venue">IEEE Transactions on Image Processing</div><div class="publication-authors">Mohammad Sabokrou, Mohsen Fayyaz, Mahmood Fathy, Reinhard Klette</div><div class="publication-links"><a href="https://ieeexplore.ieee.org/document/7858798" target="_blank" rel="noreferrer">Paper ↗</a></div></div></article>
+<article class="publication-row"><div class="publication-year">2016</div><div><div class="publication-title">STFCN: Spatio-Temporal Fully Convolutional Neural Network for Semantic Segmentation of Street Scenes</div><div class="publication-venue">ACCV Workshop</div><div class="publication-authors">Mohsen Fayyaz, Mohammad Sabokrou, Mohammad Hajizadeh, Mahmood Fathy, Fay Huang, Reinhard Klette</div><div class="publication-links"><a href="https://link.springer.com/chapter/10.1007/978-3-319-54407-6_33" target="_blank" rel="noreferrer">Paper ↗</a><a href="https://github.com/MohsenFayyaz89/STFCN" target="_blank" rel="noreferrer">Code ↗</a></div></div></article></div></div></section></main><footer class="site-footer"><div class="shell footer-wrap"><span>© 2026 Mohsen Fayyaz</span><div class="footer-links"><a href="#" data-email-link>Email</a><a href="https://scholar.google.com/citations?hl=en&amp;user=IBtTAGoAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a><a href="https://github.com/MohsenFayyaz89" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/mfayaz/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://x.com/MohsenFyz" target="_blank" rel="noreferrer">Twitter</a></div></div></footer>
+<script>const t=document.getElementById('theme-toggle');t?.addEventListener('click',()=>{const r=document.documentElement;const n=r.dataset.theme==='dark'?'light':'dark';if(n==='dark')r.dataset.theme='dark';else delete r.dataset.theme;localStorage.setItem('theme',n);});</script>
+<script>document.querySelectorAll('[data-email-link]').forEach((el)=>{el.addEventListener('click',(e)=>{e.preventDefault();const r=(v)=>v.split('').reverse().join('');window.location.href='mailto:'+r('98zayyaf.neshom')+'@'+r('moc.liamg');});});</script></body></html>
